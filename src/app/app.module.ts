@@ -8,6 +8,7 @@ import { TodoItemComponent } from './components/todo-item/todo-item.component';
 import { AppHeaderComponent } from './components/app-header/app-header.component';
 import { UserComponent } from './components/user/user.component';
 import { TodoFormComponent } from './components/todo-form/todo-form.component';
+import {ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { TodoFormComponent } from './components/todo-form/todo-form.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
