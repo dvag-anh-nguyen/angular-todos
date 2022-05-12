@@ -1,0 +1,26 @@
+<p>todo-form works!</p>
+<pre>
+  <code>
+  </code>
+</pre>
+<div>
+  <form [formGroup]="form" (ngSubmit)="onSubmit()" >
+    <div>
+      Title: <input id="title" formControlName="title" type="text" />
+    </div>
+    <div *ngIf="f['title'].touched && f['title'].invalid && f['title'].errors">
+      <div *ngIf="f['title'].errors['required']">
+        Please enter the task title
+      </div>
+      <div *ngIf="f['title'].errors['minlength']">
+        The task title is too short
+      </div>
+    </div>
+    <div>
+      Complete: <input id="complete" formControlName="complete" type="checkbox" />
+    </div>
+    <div>
+      <button type="submit" [disabled]="form.invalid">Submit</button>
+    </div>
+  </form>
+</div>

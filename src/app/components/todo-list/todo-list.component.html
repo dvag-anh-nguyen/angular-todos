@@ -1,0 +1,9 @@
+<p>todo-list works!</p>
+Counter: {{todos.length}}
+<section *ngIf="todos.length > 0">
+  <ul>
+    <li *ngFor="let item of todos">
+      <app-todo-item [todo]="item"></app-todo-item>
+    </li>
+  </ul>
+</section>
